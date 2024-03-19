@@ -124,13 +124,23 @@ header {
   background: #fff;
   position: fixed;
   z-index: 1;
-  font-size: 1.3rem;
+  font-size: 1rem;
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
   transition: all .4s;
   top: -70px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bar span {
+  font-size: .9rem;
+  margin-left: 5px;
+}
+
+.bar:hover i{
+  transform: translateX(-3px);
+  transition: all .2s;
 }
 
 .active {
