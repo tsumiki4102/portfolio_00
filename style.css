@@ -155,6 +155,29 @@ header {
   margin-top: 80px;
 }
 
+#arrow.arrow {
+  position: fixed;
+  padding: .688rem .75rem;
+  background-color: #fff;
+  border-radius: .3rem;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
+  display: inline-flex;
+  margin: 0;
+  right: 1rem;
+  bottom: -3rem;
+  text-decoration: none;
+  transition: bottom .2s, transform .2s;
+}
+
+.arrow:hover {
+  transform: translateY(-.25rem);
+}
+
+#arrow.arrow_active {
+  bottom: 1rem;
+}
+
 /* サブページのコンテンツ表示 */
 
 .fade {

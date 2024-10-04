@@ -1,21 +1,38 @@
 'use strict';
 
 {
-  //グローバルナビの表示、非表示
-  const scrollNavi = function() {
-    const mainNavi = document.getElementById('bar');
-    const headerTop = document.getElementById('top');
-    const y = window.scrollY;
-    const headerTopClientRect = headerTop.getBoundingClientRect();
-    const triggerY = y + headerTopClientRect.top+60
-  ;
-    if(y > triggerY) {
-      mainNavi.classList.add('active');
-    } else {
-      mainNavi.classList.remove('active');
-    }
-  };
-  window.addEventListener('scroll', scrollNavi);
+//戻るバーの表示、非表示
+const scrollNavi = function() {
+  const mainNavi = document.getElementById('bar');
+  const headerTop = document.getElementById('top');
+  const y = window.scrollY;
+  const headerTopClientRect = headerTop.getBoundingClientRect();
+  const triggerY = y + headerTopClientRect.top+60
+;
+  if(y > triggerY) {
+    mainNavi.classList.add('active');
+  } else {
+    mainNavi.classList.remove('active');
+  }
+};
+window.addEventListener('scroll', scrollNavi);
+
+//アローナビ表示、非表示
+const scrollArrow = function() {
+  const mainNavi = document.getElementById('arrow');
+  const headerTop = document.getElementById('top');
+  const y = window.scrollY;
+  const headerTopClientRect = headerTop.getBoundingClientRect();
+  const triggerY = y + headerTopClientRect.top+500
+;
+  if(y > triggerY) {
+    mainNavi.classList.add('arrow_active');
+  } else {
+    mainNavi.classList.remove('arrow_active');
+  }
+};
+window.addEventListener('scroll', scrollArrow);
+
 
   //スクロール時のコンテンツ表示
     const scrollAnimationEle = document.querySelectorAll('.fade');
@@ -37,7 +54,7 @@
   const cb = function(entries, observer) {
       entries.forEach(entry => {
           if(entry.isIntersecting) {
-              entry.target.classList.add('displayed');//スクロール感知で「displayed」のクラ  ス名を付与
+              entry.target.classList.add('displayed');//スクロール感知で「displayed」のクラ ス名を付与
               observer.unobserve(entry.target); //監視の終了
           }
       });
