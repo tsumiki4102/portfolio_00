@@ -227,7 +227,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .sub {
-    padding: 150px 0;
+    padding: 130px 0;
   }
 }
 
@@ -263,7 +263,7 @@ header {
   }
 
   .sub {
-    padding: 120px 0;
+    padding: 100px 0;
   }
 }
 
